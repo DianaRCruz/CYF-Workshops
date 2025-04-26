@@ -1,7 +1,11 @@
 //increments the number in a node's text
-function increment(node) {
+// function increment(node) {
+//   let current = node.textContent;
+//   node.textContent = Number(current) + 1;
+// }
+function decrement(node) {
   let current = node.textContent;
-  node.textContent = Number(current) + 1;
+  node.textContent = Number(current) - 1;
 }
 
 export function App() {
@@ -9,8 +13,9 @@ export function App() {
 
   const header = document.createElement("header");
   header.innerHTML = `
-        <h1>Number Counter up. </h1>
-        <p>A simple counter. Press increment to increase the count by one.</p>
+
+        <h1>Number Counter</h1>
+        <p>A simple counter. Press increment to decrease the count by one.</p>
     `;
   body.appendChild(header);
 
@@ -24,7 +29,7 @@ export function App() {
   const button = body.querySelector("#increment");
   const counter = body.querySelector("#counter");
   button.addEventListener("click", () => {
-    increment(counter);
+    decrement(counter);
   });
 
   return body;
