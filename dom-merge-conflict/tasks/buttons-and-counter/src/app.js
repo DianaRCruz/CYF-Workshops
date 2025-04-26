@@ -9,7 +9,7 @@ export function App() {
 
   const header = document.createElement("header");
   header.innerHTML = `
-        <h1>Number Counter up </h1>
+        <h1>Number Counter up. </h1>
         <p>A simple counter. Press increment to increase the count by one.</p>
     `;
   body.appendChild(header);
